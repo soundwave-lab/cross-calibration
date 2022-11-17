@@ -12,3 +12,15 @@ class FunctionGenerater:
 
     def change_frequency(self, f): #f Hzに変更
         self._func.write('FREQuency '+ str(f))
+        
+    def output_off(self):
+        self._func.write('OUTPut OFF')
+        
+    def output_on(self):
+        self._func.write('OUTPut ON')
+        #OUTPut {OFF|ON} 
+        
+    def output(self):
+        return self._func.query('OUTPut?')
+
+        
